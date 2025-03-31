@@ -13,7 +13,7 @@ export function hitTest() {
     const playerBoundingBox = new THREE.Box3();
     playerBoundingBox.setFromObject(player);
 
-    row.vehicles.forEach(({ ref }) => {
+    row.vehicles.forEach(({ ref }): void => {
       if (!ref) throw Error("Vehicle reference is missing");
 
       const vehicleBoundingBox = new THREE.Box3();
